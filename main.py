@@ -44,5 +44,6 @@ while len(population) < 100:
     print(f"Organism {len(population)} generated")
 
 with open(f"{outputName}_seed_population.txt", 'x') as output:
-    output.write(str(population))
+    for i in range(len(population)):
+        output.write(str(population[i])+"\n")
     output.close()

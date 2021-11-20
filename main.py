@@ -42,3 +42,7 @@ while len(population) < 100:
                         "MinTemp": 0-random.randint(templateOrganism["MinTemp"][0], templateOrganism["MinTemp"][1])}
     population.append(toad1)
     print(f"Organism {len(population)} generated")
+
+with open(f"{outputName}_seed_population.txt", 'x') as output:
+    output.write(str(population))
+    output.close()

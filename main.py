@@ -47,3 +47,18 @@ with open(f"{outputName}_seed_population.txt", 'x') as output:
     for i in range(len(population)):
         output.write(str(population[i])+"\n")
     output.close()
+
+maxTempAverage = 0
+for i in range(len(population)):
+    maxTempAverage += population[i]["MaxTemp"]
+
+maxTempAverage = maxTempAverage/100
+
+minTempAverage = 0
+for i in range(len(population)):
+    minTempAverage += population[i]["MinTemp"]
+
+minTempAverage = minTempAverage/100
+medianTemp = maxTempAverage+minTempAverage
+medianTemp = medianTemp/2
+print(medianTemp)

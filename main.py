@@ -61,4 +61,6 @@ for i in range(len(population)):
 minTempAverage = minTempAverage/100
 medianTemp = maxTempAverage+minTempAverage
 medianTemp = medianTemp/2
-print(medianTemp)
+localClimateIndex = random.randint((0-10), 10)
+baseTemp = medianTemp*localClimateIndex
+print(baseTemp)
